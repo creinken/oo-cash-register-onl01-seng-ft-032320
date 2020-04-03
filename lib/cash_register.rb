@@ -21,7 +21,8 @@ class CashRegister
   end
   
   def apply_discount
-    
+    @total -= @discount
+    message = ""
   end
   
   def items

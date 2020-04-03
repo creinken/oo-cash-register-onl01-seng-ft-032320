@@ -1,5 +1,5 @@
 class CashRegister
-  attr_accessor :total, :discount, :previous_total
+  attr_accessor :total, :discount, :previous_total, :last_transaction
   
   def initialize(discount = 0)
     @total = 0
@@ -12,6 +12,7 @@ class CashRegister
   end
   
   def add_item(item, price, quantity = 1)
+    @last_transaction = [item, price, quantity]
     item_info_array = [item, price]
     quantity.times do
       @previous_total = @total

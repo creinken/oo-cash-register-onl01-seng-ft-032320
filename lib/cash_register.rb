@@ -8,11 +8,12 @@ class CashRegister
   end
   
   def total
-    
+    @total
   end
   
   def add_item(item, price)
     item_hash = {item => price}
+    @total += price
     @items << item_hash
   end
   

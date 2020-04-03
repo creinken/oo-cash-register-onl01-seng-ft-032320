@@ -9,6 +9,8 @@ class CashRegister
     
   end
   
-  def
+  def add_item
+    
+  end
   
 end

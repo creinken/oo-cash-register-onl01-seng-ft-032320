@@ -12,11 +12,11 @@ class CashRegister
   end
   
   def add_item(item, price, quantity = 1)
-    item_hash = {item => price}
+    item_info_array = [item, price]
     quantity.times do
       @previous_total = @total
       @total += price
-      @items << item_hash
+      @items << item_info_array
     end
   end
   
@@ -34,16 +34,14 @@ class CashRegister
   def items
     item_names = []
     @items.each do |item_info|
-      item_info.each do |item, price|
-        item_names << item
-      end
+      item_names << item_info[0]
     end
     
     item_names
   end
   
   def void_last_transaction
-    
+    @total - 
   end
   
 end

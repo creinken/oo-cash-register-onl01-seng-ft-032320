@@ -11,10 +11,12 @@ class CashRegister
     @total
   end
   
-  def add_item(item, price)
+  def add_item(item, price, quantity = 1)
     item_hash = {item => price}
-    @total += price
-    @items << item_hash
+    quantity.times do
+      @total += price
+      @items << item_hash
+    end
   end
   
   def apply_discount

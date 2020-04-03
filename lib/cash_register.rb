@@ -12,7 +12,7 @@ class CashRegister
   end
   
   def add_item(item)
-    
+    @items << item
   end
   
   def apply_discount

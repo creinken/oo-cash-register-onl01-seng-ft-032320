@@ -34,7 +34,9 @@ class CashRegister
   def items
     item_names = []
     @items.each do |item_info|
-      item_names << item_info[0]
+      item_info.each do |item, price|
+        item_names << item
+      end
     end
     
     item_names

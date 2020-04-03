@@ -14,6 +14,7 @@ class CashRegister
   def add_item(item, price, quantity = 1)
     item_hash = {item => price}
     quantity.times do
+      @previous_total = @total
       @total += price
       @items << item_hash
     end

@@ -11,8 +11,9 @@ class CashRegister
     
   end
   
-  def add_item(item)
-    @items << item
+  def add_item(item, price)
+    item_hash = {item, price}
+    @items << item_hash
   end
   
   def apply_discount

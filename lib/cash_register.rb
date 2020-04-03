@@ -12,7 +12,7 @@ class CashRegister
   end
   
   def add_item(item, price)
-    item_hash = {item, price}
+    item_hash = {item => price}
     @items << item_hash
   end
   

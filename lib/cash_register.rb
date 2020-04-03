@@ -32,7 +32,12 @@ class CashRegister
   end
   
   def items
-    @items
+    item_names = []
+    @items.each do |item, price|
+      item_names << item
+    end
+    
+    item_names
   end
   
   def void_last_transaction
